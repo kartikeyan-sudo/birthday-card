@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mystery Greeting Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Slide 1: Landing -->
+  <section class="slide slide-landing active" id="slide-landing">
+    <div class="mystery-bg"></div>
+    <button id="startMystery" class="mystery-btn pulse">🔮 Click to Begin</button>
+  </section>
+
+  <!-- Slide 2: Hello -->
+  <section class="slide" id="slide-hello">
+    <div class="floating-orbs"></div>
+    <div class="slide-content">
+      <h1 class="anim-fadein">Hello There...</h1>
+      <p class="anim-fadein anim-delay-1">Something special is waiting for you.</p>
+      <button class="next-btn fancy-btn anim-fadein anim-delay-2">Next</button>
+    </div>
+  </section>
+
+  <!-- Slide 3: Nostalgia -->
+  <section class="slide" id="slide-nostalgia">
+    <div class="vignette-bg"></div>
+    <div class="slide-content">
+      <h2 class="anim-fadeup">Remember when...</h2>
+      <p class="anim-fadeup anim-delay-1">...you smiled for no reason?</p>
+      <button class="next-btn fancy-btn anim-fadeup anim-delay-2">Next</button>
+    </div>
+  </section>
+
+  <!-- Slide 4: Envelope Surprise -->
+  <section class="slide" id="slide-envelope">
+    <div class="slide-content">
+      <div class="envelope-container anim-fadein">
+        <div class="envelope">
+          <div class="flap"></div>
+          <div class="letter">Tap to Reveal</div>
+        </div>
+      </div>
+      <button class="next-btn fancy-btn anim-fadein anim-delay-1" style="display:none;">Open</button>
+    </div>
+  </section>
+
+  <!-- Slide 5: Positive Words -->
+  <section class="slide" id="slide-words">
+    <div class="slide-content">
+      <h2 id="positiveWord" class="positive-word anim-fadeup">Joy</h2>
+      <button class="next-btn fancy-btn anim-fadeup anim-delay-1">Next</button>
+    </div>
+  </section>
+
+  <!-- Slide 6: Wish -->
+  <section class="slide" id="slide-wish">
+    <div class="night-bg"></div>
+    <div class="slide-content">
+      <div class="wish-candle anim-fadein">
+        <div class="candle-stick"></div>
+        <div class="candle-flame" id="candle-flame"></div>
+      </div>
+      <p class="anim-fadein anim-delay-1">Make a wish and blow out the candle!</p>
+      <button id="blowCandle" class="next-btn fancy-btn anim-fadein anim-delay-2">Blow Candle</button>
+    </div>
+  </section>
+
+  <!-- Slide 7: Birthday Reveal -->
+  <section class="slide" id="slide-birthday">
+    <div class="curtains">
+      <div class="curtain left"></div>
+      <div class="curtain right"></div>
+    </div>
+    <div class="slide-content cake-reveal">
+      <h1 class="hb-title anim-pop">Happy Birthday Jyoti! 🎉</h1>
+      <div class="cake-section">
+        <div id="cake" class="cake anim-slideup">
+          <div class="cake-bottom"></div>
+          <div class="cake-middle"></div>
+          <div class="cake-top"></div>
+          <div class="candles">
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+          </div>
+          <div id="sprinkle-box"></div>
+        </div>
+        <button id="cutCakeBtn" class="fancy-btn anim-fadein anim-delay-1">Cut the Cake 🎂</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 8: Video -->
+  <section class="slide" id="slide-video">
+    <div class="slide-content">
+      <iframe id="birthdayVideo"
+        src=""
+        width="100%"
+        height="235"
+        frameborder="0"
+        allow="autoplay"
+        allowfullscreen
+        style="border-radius: 17px; box-shadow: 0 2px 18px #ffe0e9a0;">
+      </iframe>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
