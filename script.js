@@ -85,7 +85,7 @@ document.getElementById('cutCakeBtn').onclick = function() {
     nextSlide();
     // Autoplay video
     // ---- PUT YOUR GOOGLE DRIVE FILE ID BELOW ----
-    document.getElementById('birthdayVideo').src = "";
+    document.getElementById('birthdayVideo').src = "VID-20250526-WA0006.mp4";
   }, 1100);
 };
 
