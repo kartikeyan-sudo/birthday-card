@@ -42,7 +42,7 @@ document.querySelectorAll('.next-btn').forEach(btn => {
 // Envelope surprise slide
 const envelope = document.querySelector('.envelope');
 const envelopeBtn = document.querySelector('#slide-envelope .next-btn');
-envelope.onclick = function() {
+envelope.onclick = function () {
   if (!envelope.classList.contains('open')) {
     envelope.classList.add('open');
     envelopeBtn.style.display = 'inline-block';
@@ -53,20 +53,19 @@ envelope.onclick = function() {
 const words = ["Joy", "Laughter", "Adventure", "Kindness", "Magic", "Love", "Wonder", "Possibility"];
 let wordIdx = 0;
 const wordElem = document.getElementById('positiveWord');
-document.getElementById('slide-words').addEventListener('click', function(e) {
+document.getElementById('slide-words').addEventListener('click', function (e) {
   if (e.target.classList.contains('next-btn')) {
     nextSlide();
   } else {
     wordIdx = (wordIdx + 1) % words.length;
     wordElem.innerText = words[wordIdx];
     wordElem.classList.remove('positive-word');
-    setTimeout(()=>wordElem.classList.add('positive-word'), 20);
+    setTimeout(() => wordElem.classList.add('positive-word'), 20);
   }
 });
 
 // Candle wish slide
-document.getElementById('blowCandle').onclick = function() {
-  // Animate out candle flame
+document.getElementById('blowCandle').onclick = function () {
   const flame = document.getElementById('candle-flame');
   flame.style.transition = 'opacity 1s';
   flame.style.opacity = 0;
@@ -74,7 +73,7 @@ document.getElementById('blowCandle').onclick = function() {
 };
 
 // Birthday Reveal Slide
-document.getElementById('cutCakeBtn').onclick = function() {
+document.getElementById('cutCakeBtn').onclick = function () {
   const cake = document.getElementById('cake');
   if (cake.classList.contains('cut')) return;
   cake.classList.add('cut');
@@ -82,12 +81,8 @@ document.getElementById('cutCakeBtn').onclick = function() {
   this.disabled = true;
   this.innerText = "Yay! 🍰";
   setTimeout(() => {
-    nextSlide();
-    // Autoplay video
-    // ---- PUT YOUR GOOGLE DRIVE FILE ID BELOW ----
-    document.getElementById('birthdayVideo').src = "birthday-card/VID-20250526-WA0006.mp4";
-    // Link added as requested, no extra edits:
-    // https://drive.google.com/file/d/1oLQc2fEMiM48KVD2DTImeQE2kfNf7BDv/view?usp=drivesdk
+    // Redirect to Google Drive video
+    window.location.href = "https://drive.google.com/file/d/1oLQc2fEMiM48KVD2DTImeQE2kfNf7BDv/view?usp=drivesdk";
   }, 1100);
 };
 
@@ -122,7 +117,7 @@ function sprinkleBurst() {
 }
 
 // Sprinkle/Curtain CSS (injected)
-(function(){
+(function () {
   const style = document.createElement('style');
   style.innerHTML = `.sprinkle {
     position: absolute; z-index: 9; pointer-events: none;
@@ -132,6 +127,6 @@ function sprinkleBurst() {
 })();
 
 // Show first slide on load
-window.onload = function() {
+window.onload = function () {
   document.getElementById(slides[0]).classList.add('active');
 };
